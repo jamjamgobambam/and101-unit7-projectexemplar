@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pythagorean Theorem Calculator</string>
+    <string name="heading">Pythagorean Theorem Calculator</string>
+    <string name="calculate">Calculate</string>
+    <string name="sideC">Side C =</string>
+    <string name="rightTriangle">right triangle</string>
+    <string name="sideB">Side B</string>
+    <string name="sideA">Side A</string>
+</resources>

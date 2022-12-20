@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/triangle"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/rightTriangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/triangle" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/philosopher_bold"
+        android:text="@string/heading"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="showResult"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sideC" />
+
+    <EditText
+        android:id="@+id/sideA"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="@string/sideA"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAppearance="@style/TextAppearance.Sides"
+        android:textColorHint="@color/purple"
+        app:layout_constraintStart_toEndOf="@+id/triangle"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/sideB"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="@string/sideB"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAppearance="@style/TextAppearance.Sides"
+        android:textColorHint="@color/purple"
+        app:layout_constraintStart_toEndOf="@+id/triangle"
+        app:layout_constraintTop_toBottomOf="@+id/sideA" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sideC"
+        app:layout_constraintTop_toBottomOf="@+id/triangle" />
+
+    <TextView
+        android:id="@+id/sideC"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="@string/sideC"
+        android:textAlignment="textStart"
+        android:textColor="@color/purple"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/triangle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
